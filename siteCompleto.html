@@ -101,7 +101,7 @@
     <div class="container">
         <div class="card-columns">
             <div class="card">
-                <img class="card-img-top" src=".../100px160/" alt="Imagem de capa do card">
+                <img class="card-img-top" src="./assets/img/love.gif" alt="Imagem de capa do card">
                 <div class="card-body">
                     <h5 class="card-title">Título do card que quebra em uma nova linha</h5>
                     <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma
@@ -119,7 +119,7 @@
                 </blockquote>
             </div>
             <div class="card">
-                <img class="card-img-top" src=".../100px160/" alt="Imagem de capa do card">
+                <img class="card-img-top" src="./assets/img/keep calm.gif" alt="Imagem de capa do card">
                 <div class="card-body">
                     <h5 class="card-title">Título do card</h5>
                     <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a
@@ -127,7 +127,7 @@
                     <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
                 </div>
             </div>
-            <div class="card bg-info text-center p-3">
+            <div class="card text-center p-3">
                 <blockquote class="blockquote mb-0">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
                     <footer class="blockquote-footer">
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src=".../100px260/" alt="Imagem do card">
+                <img class="card-img" src="./assets/img/you are smart.gif" alt="Imagem do card">
             </div>
             <div class="card p-3 text-right">
                 <blockquote class="blockquote mb-0">
@@ -201,9 +201,16 @@
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Endereço de email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="nome@exemplo.com">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome"
+                            placeholder="Digite seu nome" onkeyup="validaNome()">
+                            <div id="txtNome"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email"
+                            placeholder="nome@exemplo.com" onkeyup="validaEmail()">
+                            <div id="txtEmail"></div>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Gênero</label>
@@ -211,12 +218,12 @@
                             <option>Femino</option>
                             <option>Masculino</option>
                             <option>Não binário</option>
-
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Sua mensagem</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="assunto">Sua mensagem</label>
+                        <textarea class="form-control" id="assunto" rows="3" onkeyup="validaAssunto()"></textarea>
+                        <div id="txtAssunto"></div>
                     </div>
                     <div class="form-group d-flex justify-content-end">
                         <button class="btn btn-outline-success">Enviar</button>
@@ -255,6 +262,9 @@
         </footer>
         <!-- /Footer -->
     </div>
+
+    <!-- JavaScript unha -->
+    <script src="./js/scripts.js"></script>
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
